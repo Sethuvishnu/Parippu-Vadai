@@ -104,8 +104,8 @@ const Email = mongoose.model('Email', emailSchema);
 // const PORT = 4001;
 
 // Replace these with your actual keys
-const API_KEY = "sk_fbd27d80bee240d6dfb2e969eafddc22360af0b7e99ac309";
-const CONVERSATION_ID = "conv_7501kgvm1bhzfvtsqcf03ydh7cfv";
+const API_KEY = "ENTER YOUR API"
+const CONVERSATION_ID = "ENTER YOUR API"
 
 // ---------------------------
 // // Helper: Fetch ElevenLabs conversation
