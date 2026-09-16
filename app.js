@@ -9,7 +9,7 @@ const Email = require('./models/Email');
 
 require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 // in app.js, near your other startup code
-const { syncNewConversations } = require('./syncConversations');
+const { syncNewConversations } = require('./syncNewConversations');
 const cron = require('node-cron');
 
 cron.schedule('*/2 * * * *', () => {
