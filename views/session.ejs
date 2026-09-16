@@ -1,0 +1,103 @@
+<%- include('partials/header'); -%>
+
+
+
+
+
+
+<style>
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between boxes */
+}
+
+.user-box {
+  flex: 0 0 calc(33.333% - 20px); /* 3 per row minus the gap */
+  border: 1px solid #2cbe00;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* ensures padding doesn’t break layout */
+}
+
+.user-box p {
+  margin: 5px 0;
+}
+.head {
+  font-size: 80px;     /* make it bigger */
+  margin: 20px 0;      /* spacing around */
+  line-height: 1.2;    /* proper line spacing */
+  text-align: center;  /* center horizontally */
+  font-weight: bold;   /* bold text */
+}
+
+.head h1 {
+  font-size: 180px;
+  margin: 0 0 10px 0;
+  line-height: 1;
+  height: 200px;
+  text-align: center;
+}
+
+.user-box {
+  flex: 0 0 calc(33.333% - 20px); /* 3 per row minus the gap */
+  border: 1px solid #2cbe00;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* ensures padding doesn’t break layout */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.user-box:hover {
+  transform: translateY(-8px) scale(1.02);   /* slight lift + scale */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);    /* stronger shadow */
+  background-color: #eaffea;                 /* light green shade */
+  border-color: #28a745;                     /* brighter green border */
+}
+
+.name {
+  font-size: 22px;       /* increase size */
+  color: #555555;        /* nice grey color */
+  font-weight: bold;     /* make it stand out */
+  display: block;        /* ensures it spans full width */
+  margin-bottom: 10px;   /* add spacing under name */
+}
+
+
+
+</style>
+<div class="heading">
+  <h1 class="head">PROFILES</h1>
+</div>
+
+
+<div class="users-container">
+  <% users.forEach(user => { %>
+    <div class="user-box">
+      <span class="name"><p><strong>Name:</strong> <%= user.profile.name %></p></span>
+      <p><strong>Location:</strong> <%= user.profile.location %></p>
+      <p><strong>Farm Size:</strong> <%= user.profile.farmSize %></p>
+      <p><strong>Crops:</strong> <%= user.profile.crops %></p>
+      <p><strong>Organic:</strong> <%= user.profile.organic %></p>
+      <p><strong>Selling:</strong> <%= user.profile.selling %></p>
+      <p><strong>Challenges:</strong> <%= user.profile.challenges %></p>
+      <p><strong>Contact:</strong> <%= user.profile.contact %></p>
+    </div>
+  <% }) %>
+</div>
+
+
+  
+    
+
+<%- include('partials/footer'); -%>
+
+
+
+  

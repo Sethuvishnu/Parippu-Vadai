@@ -1,0 +1,62 @@
+<%- include('partials/header'); -%>
+
+<style>
+header {
+  display: flex;                /* put image + text side by side */
+  justify-content: center;      /* center everything horizontally */
+  align-items: center;          /* align vertically */
+  gap: 50px;                    /* spacing between image and text */
+  padding: 40px;
+}
+
+.smoothie {
+  flex: 1;                      /* image takes equal space */
+  display: flex;
+  justify-content: flex-end;    /* push image towards the text */
+}
+
+.farmphoto {
+  width: 100%;
+  max-width: 800px;             /* adjust image size */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.headings {
+  flex: 1;                      /* text takes equal space */
+  text-align: left;             /* align text left */
+}
+
+.headings h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.headings h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+</style>
+<header>
+  <div class="smoothie">
+    <img class="farmphoto" src="/farmer.jpg" alt="">
+  </div>
+  <div class="headings">
+    <h2>FarmLink</h2>
+    <h3>By Students For Farmers</h3>
+    <a href="/emails" class="btn">View Farmers</a>
+  </div>
+</header>
+
+
+<%- include('partials/footer'); -%>
